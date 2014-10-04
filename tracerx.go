@@ -6,10 +6,10 @@
 // The default can by changed by setting the DefaultKey.
 //
 // The values control where the tracing is output as follows:
-// unset, 0, or "false":   no output
-// 1, 2:                   stderr
-// absolute path:          output will be written to the file
-// 3 - 10:                 output will be written to that file descriptor
+//     unset, 0, or "false":   no output
+//     1, 2:                   stderr
+//     absolute path:          output will be written to the file
+//     3 - 10:                 output will be written to that file descriptor
 //
 // By default, messages will be prefixed with "trace: ". This prefix can be
 // modified by setting Prefix.
