@@ -58,8 +58,14 @@ func PrintfKey(key, format string, args ...interface{}) {
 }
 
 // PerformanceSince writes out the time since the given time, if
+// tracing for the default key is enabled and the performance key is set
+func PerformanceSince(what string, t time.Time) {
+	PerformanceSinceKey(DefaultKey, what, t)
+}
+
+// PerformanceSince writes out the time since the given time, if
 // tracing for the given key is enabled and the performance key is set
-func PerformanceSince(key, what string, t time.Time) {
+func PerformanceSinceKey(key, what string, t time.Time) {
 	tracer := getTracer(key)
 
 	if tracer.enabled && tracer.performance {
